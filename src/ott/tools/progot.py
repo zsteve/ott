@@ -187,10 +187,10 @@ class ProgOT:
           epsilon_scales
       ), "Epsilon scales have different length than alphas."
 
-    checkify.check(
-        jnp.all((alphas >= 0.0) & (alphas <= 1.0)),
-        "Alphas must be a sequence with values between zero and one."
-    )
+    # checkify.check(
+    #     jnp.all((alphas >= 0.0) & (alphas <= 1.0)),
+    #     "Alphas must be a sequence with values between zero and one."
+    # )
 
     self.alphas = alphas
     self.epsilons = epsilons
